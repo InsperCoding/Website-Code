@@ -8,7 +8,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Inpser Code"
+  title: "Insper Code"
 };
 
 export default function RootLayout({
