@@ -67,7 +67,7 @@ export function Header() {
   return (
     <header className="sticky top-0 z-40 bg-white container mx-auto px-4 py-6 flex items-center justify-between">
       <div className="flex items-center">
-        <Link href="/" className="text-2xl font-medium">
+        <Link href="/" className="flex flex-row justify-center text-2xl font-medium">
            <Image
             src="/favicon.ico"
             alt="Insper Code Icon"
@@ -136,7 +136,7 @@ export function Header() {
       </nav>
 
       <div className="flex items-center">
-        <Link href="/" className="text-2xl font-medium">
+        <Link href="/" className="flex flex-row justify-center text-2xl font-medium">
            <Image
             src="/favicon.ico"
             alt="Insper Code Icon"

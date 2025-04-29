@@ -1,0 +1,76 @@
+"use client";
+import { useRef, FormEvent } from "react";
+import emailjs from "@emailjs/browser";
+
+export default function ContactForm() {
+  const formRef = useRef<HTMLFormElement>(null);
+
+  const handleSubmit = (e: FormEvent) => {
+    e.preventDefault();
+    if (!formRef.current) return;
+
+    emailjs
+      .sendForm(
+        "service_k5nms6v",
+        "template_4eal5lt",
+        formRef.current,
+        "z_A3g_9lcY3niEzZG"
+      )
+      .then(
+        () => alert("Email sent! 🎉"),
+        (err) => alert("Error: " + err.text)
+      );
+
+    formRef.current.reset();
+  };
+
+  return (
+    <div className="max-w-lg mx-auto p-6 bg-white rounded-2xl shadow-xl">
+      <h2 className="text-2xl font-semibold text-gray-800 mb-4 text-center">
+        Contact Us
+      </h2>
+      <form
+        ref={formRef}
+        onSubmit={handleSubmit}
+        className="space-y-5"
+      >
+        <label className="block">
+          <span className="text-gray-700">Your Name</span>
+          <input
+            type="text"
+            name="user_name"
+            required
+            className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
+          />
+        </label>
+
+        <label className="block">
+          <span className="text-gray-700">Your Email</span>
+          <input
+            type="email"
+            name="user_email"
+            required
+            className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
+          />
+        </label>
+
+        <label className="block">
+          <span className="text-gray-700">Message</span>
+          <textarea
+            name="message"
+            required
+            rows={5}
+            className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
+          />
+        </label>
+
+        <button
+          type="submit"
+          className="w-full py-3 bg-indigo-600 text-white font-medium rounded-lg shadow hover:bg-indigo-700 transition"
+        >
+          Send Email
+        </button>
+      </form>
+    </div>
+  );
+}
