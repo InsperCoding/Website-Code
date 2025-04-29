@@ -1,5 +1,5 @@
 import Image from "next/image"
-import ContactForm from "./contact/ContactForm"
+import ContactForm from "./contact-components/ContactForm"
 
 export function Contact() {
   return (
