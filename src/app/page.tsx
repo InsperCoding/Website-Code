@@ -5,7 +5,7 @@ import { Slogan } from "../components/slogan"
 import { AboutUs } from "../components/about";
 import { MissionVision } from "../components/mission-vision";
 import { Services } from "../components/services";
-import ContactForm from "../components/contact/ContactForm"
+import { Contact } from "../components/contact"
 
 export default function Home() {
   return (
@@ -25,7 +25,7 @@ export default function Home() {
         <MissionVision />
         <Services />
         <PartnersSection />
-        <ContactForm />
+        <Contact />
       </div>
       <Footer />
     </div>
