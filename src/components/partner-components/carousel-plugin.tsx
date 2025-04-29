@@ -2,7 +2,6 @@
 
 import * as React from "react"
 import { PartnerLogo } from "./partner-logo";
-import { Card, CardContent } from "@/components/ui/card"
 
 const LogoList = [
     "https://media.licdn.com/dms/image/v2/D4D0BAQFPtz92o_eL1Q/company-logo_200_200/company-logo_200_200/0/1711374204983/inteli_game_lab_logo?e=1750896000&v=beta&t=WSuZ3MdZwI65gF3y3rDKQiHZOu3vqL5wKeFtR4-4bZo",

@@ -1,14 +1,31 @@
-import { PartnersSection } from "../components/partners-section"
+import { PartnersSection } from "../components/partners"
 import { Footer } from "../components/footer"
 import { Header } from "../components/header"
+import { Slogan } from "../components/slogan"
+import { AboutUs } from "../components/about";
+import { MissionVision } from "../components/mission-vision";
+import { Services } from "../components/services";
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-white">
       <Header />
-      <main>
+      <div className="w-full md:w-[75%] mx-auto">
+        <Slogan />
+      </div>
+      
+      <div className="w-full bg-blue-600">
+        <div className="w-full md:w-[75%] mx-auto">
+          <AboutUs />
+        </div>
+      </div>
+      
+      <div className="w-full md:w-[75%] mx-auto">
+        <MissionVision />
+        <Services />
         <PartnersSection />
-      </main>
+      </div>
+      
       <Footer />
     </div>
   );
