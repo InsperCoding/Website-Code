@@ -6,6 +6,7 @@ import { AboutUs } from "../components/about";
 import { MissionVision } from "../components/mission-vision";
 import { Services } from "../components/services";
 import { Contact } from "../components/contact"
+import { Projects } from "../components/project";
 
 export default function Home() {
   return (
@@ -25,6 +26,7 @@ export default function Home() {
         <MissionVision />
         <Services />
         <PartnersSection />
+        <Projects/>
         <Contact />
       </div>
       <Footer />

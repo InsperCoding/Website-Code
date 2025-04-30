@@ -1,5 +1,6 @@
 import { ServiceCard } from "./services-components/service-card"
 import Image from "next/image"
+import { CgWebsite } from "react-icons/cg";
 
 export function Services() {
   return (
@@ -28,7 +29,7 @@ export function Services() {
               <div className="relative w-10 h-10 mx-auto mb-4">
                 <Image
                   src="/assets/controle.png"
-                  alt="Game Design"
+                  alt="GameDesign"
                   fill
                   className="object-contain"
                 />

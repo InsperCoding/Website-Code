@@ -1,14 +1,16 @@
 import type { Metadata } from "next";
-import { Geist_Mono } from "next/font/google";
+import { Montserrat } from "next/font/google";
+
 import "./globals.css";
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const montserrat = Montserrat({
+  variable: "--font-montserrat",
   subsets: ["latin"],
+  display: "swap"
 });
 
 export const metadata: Metadata = {
-  title: "Insper Code"
+  title: "Insper Code",
 };
 
 export default function RootLayout({
@@ -18,9 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-br">
-      <body
-        className={`$${geistMono.variable} antialiased`}
-      >
+      <body className={`${montserrat.variable} antialiased`}>
         {children}
       </body>
     </html>
