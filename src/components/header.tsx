@@ -58,7 +58,7 @@ export function Header() {
   return (
     <header className="relative px-10 py-3 w-full">
 
-      <nav className="fixed top-3 left-1/2 z-50 w-fit flex items-center bg-gray-100 rounded-full px-1 py-1 drop-shadow-lg -translate-x-1/2">
+      <nav className="fixed top-3 left-1/2 z-50 w-fit flex items-center bg-white rounded-full px-1 py-1 drop-shadow-lg -translate-x-1/2">
         {navItems.map(({ name, targetId }) => {
           const isActive = targetId === activeSection
           return (

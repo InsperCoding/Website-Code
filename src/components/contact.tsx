@@ -1,11 +1,23 @@
-import Image from "next/image"
-import ContactForm from "./contact-components/ContactForm"
+import Image from "next/image";
+import ContactForm from "./contact-components/ContactForm";
 
 export function Contact() {
   return (
-    <div id='Contatos'  className="my-3 pb-3">
-       <h2 className="text-3xl font-bold mb-12 text-center md:text-left">Contato</h2>
+    <div className="w-full flex flex-row items-stretch rounded-sm overflow-hidden">
+      {/* Formulário ocupa 100 % até sm; 75 % a partir de md */}
+      <div className="w-full md:w-3/5">
         <ContactForm />
+      </div>
+
+      {/* Imagem: escondida até sm; visível (25 %) em md+ */}
+      <div className="relative hidden md:block md:w-2/5 min-h-[300px] bg-white">
+        <Image
+          src="/assets/contact-image.png"
+          alt="contato"
+          fill
+          className="object-cover"
+        />
+      </div>
     </div>
-  )
+  );
 }

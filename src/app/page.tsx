@@ -1,4 +1,5 @@
-import { PartnersSection } from "../components/partners"
+import { CarouselPlugin } from "@/components/partner-components/carousel-plugin"
+import ContactForm from "@/components/contact-components/ContactForm"
 import { Footer } from "../components/footer"
 import { Header } from "../components/header"
 import { Slogan } from "../components/slogan"
@@ -9,7 +10,7 @@ import { Projects } from "../components/project";
 
 export default function Home() {
   return (
-    <div className="flex flex-col items-center justify-center bg-white">
+    <div className="flex flex-col items-center justify-start bg-zinc-100">
 
       <section id = "home" className="w-full">
         <Header />
@@ -19,23 +20,46 @@ export default function Home() {
       </section>
       
       <section id="about" className="flex justify-center w-full bg-[#2B6BB1] pt-10 pb-10 xl: px-5">
-        <div className="flex items-between justify-center max-w-6xl">
+        <div className="flex items-between justify-center w-full max-w-6xl">
           <AboutUs />
         </div>
       </section>
 
-      <section id="services" className="flex flex-col items-center w-full xl: px-5">
-        <div className="flex flex-col items-between justify-center max-w-6xl">
-          <h2 className="text-3xl font-bold mb-3 text-left">Nossos Serviços</h2>
+      <section id="services" className="flex flex-col items-center w-full mt-10 xl: px-5">
+        <div className="flex flex-col items-between justify-center w-full max-w-6xl">
+          <h2 className="text-3xl font-semibold mb-5 text-left text-zinc-700">Nossos Serviços</h2>
           <Services />
         </div>
       </section>
       
-      <div className="w-full md:w-[75%] mx-auto">
-        <PartnersSection />
-        <Projects/>
-        <Contact />
-      </div>
+      <section
+        id="partners"
+        className="flex flex-col items-center w-full mt-10 px-5"
+      >
+        <div className="flex flex-col justify-center w-full max-w-6xl">
+          <h2 className="text-3xl font-semibold mb-5 text-left text-zinc-700">
+            Parceiros
+          </h2>
+          <CarouselPlugin />
+        </div>
+      </section>
+
+      <section id="projects" className="flex flex-col items-center w-full mt-10 xl: px-5">
+        <div className="flex flex-col items-between justify-center w-full max-w-6xl">
+          <h2 className="text-3xl font-semibold mb-5 text-left text-zinc-700">Projetos</h2>
+          <Projects/>
+        </div>
+      </section>
+
+      <section id="contatos" className="flex flex-col items-center w-full mt-10 px-5">
+        <div className="flex flex-col justify-center w-full max-w-6xl">
+          <h2 className="text-3xl font-semibold mb-5 text-left w-full text-zinc-700">Contato</h2>
+          <Contact />
+        </div>
+      </section>
+
+
+
       <Footer />
     </div>
   );

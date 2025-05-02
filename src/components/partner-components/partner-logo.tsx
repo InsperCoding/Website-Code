@@ -7,7 +7,7 @@ interface PartnerLogoProps {
 
 export function PartnerLogo({ children }: PartnerLogoProps) {
   return (
-    <Card className="aspect-[2/1] w-2xs h-2xs mx-3 p-0 flex-shrink-0 drop-shadow-xl overflow-hidden">
+    <Card className="aspect-[2/1] w-2xs h-2xs mx-1 p-0 flex-shrink-0 overflow-hidden rounded-sm">
       <CardContent className="p-0 flex items-center justify-center w-full h-full">
         {children}
       </CardContent>

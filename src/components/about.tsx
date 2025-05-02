@@ -5,7 +5,7 @@ import { PiEyeBold } from "react-icons/pi";
 export function AboutUs() {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-6">
-      <div className="relative w-full h-80 rounded-sm overflow-hidden"> 
+      <div className="relative w-full h-80 overflow-hidden"> 
         <Image
           src="/assets/foto-sobre.png"
           alt="Insper Code Team"
@@ -14,7 +14,7 @@ export function AboutUs() {
         />
       </div>
       <div className="">
-        <h2 className="text-3xl font-bold mb-3 text-white">Sobre nós</h2>
+        <h2 className="text-3xl font-semibold mb-3 text-white">Sobre nós</h2>
         <p className="text-base text-white/90 mb-1">
           O Insper Code é a organização estudantil de desenvolvimento de software do Insper. Fundada em 2021, atua
           com os valores de inovação, colaboração e trabalho em equipe para tornar a tecnologia mais acessível,
@@ -31,7 +31,7 @@ export function AboutUs() {
       <div>
         <div className="flex flex-row items-center gap-2 mb-1">
           <PiTargetBold className="text-xl text-white"></PiTargetBold>
-          <h3 className="text-xl font-semibold text-white">Missão</h3>
+          <h3 className="text-xl font-medium text-white">Missão</h3>
         </div>
         <p className="text-base text-white/90">
           Tornar a tecnologia acessível e transformar sonhos em soluções. Queremos democratizar o acesso à
@@ -43,7 +43,7 @@ export function AboutUs() {
       <div>
       <div className="flex flex-row items-center gap-2 mb-1">
           <PiEyeBold className="text-xl text-white"></PiEyeBold>
-          <h3 className="text-xl font-semibold text-white">Visão</h3>
+          <h3 className="text-xl font-medium text-white">Visão</h3>
         </div>
         <p className="text-white/90">
           Ser referência em inovação tecnológica estudantil. Nossa visão é consolidar o Insper Code como a
