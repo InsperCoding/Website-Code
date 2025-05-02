@@ -43,13 +43,13 @@ export default function CardProjeto({
   
           <div className="flex flex-col p-5 text-zinc-600">
             <h3 className="text-lg font-semibold mb-2">{title}</h3>
-            <p className="text-sm text-zinc-800">{descricao}</p>
+            <p className="text-sm">{descricao}</p>
   
             <ol className="flex flex-row space-x-2 mt-3">
               {tecnologias.map((tech, index) => (
                 <li
                   key={index}
-                  className={`flex items-center gap-1 p-1 text-xs border-2
+                  className={`flex items-center gap-1 p-1 text-xs border-2 rounded-sm
                     ${tech.cor.border} ${tech.cor.text}`}
                   title={tech.nome}
                 >

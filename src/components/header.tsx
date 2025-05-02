@@ -15,7 +15,7 @@ const navItems: NavItem[] = [
   { name: "Serviços", targetId: "services" },
   { name: "Parceiros", targetId: "partners" },
   { name: "Projetos", targetId: "projects" },
-  { name: "Contato", targetId: "footer" },
+  { name: "Contato", targetId: "contact" },
 ]
 
 export function Header() {
@@ -87,14 +87,7 @@ export function Header() {
           </Link>
         </div>
         <div className={`flex items-center justify-center`}>
-          <Link href="/" className="relative w-40 h-14">
-            <Image
-              src="/assets/code-logo.png"
-              alt="Logo Esquerda"
-              fill
-              className="object-contain"
-            />
-          </Link>
+          
         </div>
       </div>
 

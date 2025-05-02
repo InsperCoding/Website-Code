@@ -12,9 +12,9 @@ export default function Home() {
   return (
     <div className="flex flex-col items-center justify-start bg-zinc-100">
 
-      <section id = "home" className="w-full">
+      <section id = "home" className="w-full bg-white">
         <Header />
-        <div className="flex items-center justify-center h-[75vh]">
+        <div className="flex items-center justify-center h-[77vh]">
           <Slogan />
         </div>
       </section>
@@ -27,7 +27,7 @@ export default function Home() {
 
       <section id="services" className="flex flex-col items-center w-full mt-10 xl: px-5">
         <div className="flex flex-col items-between justify-center w-full max-w-6xl">
-          <h2 className="text-3xl font-semibold mb-5 text-left text-zinc-700">Nossos Serviços</h2>
+          <h2 className="text-3xl font-semibold mb-5 text-left text-zinc-700">Serviços</h2>
           <Services />
         </div>
       </section>
@@ -51,16 +51,16 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="contatos" className="flex flex-col items-center w-full mt-10 px-5">
+      <section id="contact" className="flex flex-col items-center w-full mt-10 px-5">
         <div className="flex flex-col justify-center w-full max-w-6xl">
           <h2 className="text-3xl font-semibold mb-5 text-left w-full text-zinc-700">Contato</h2>
           <Contact />
         </div>
       </section>
 
-
-
-      <Footer />
+      <section id="footer" className="flex flex-col items-center w-full mt-10">
+        <Footer />
+      </section>
     </div>
   );
 }

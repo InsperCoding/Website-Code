@@ -26,16 +26,16 @@ export default function ContactForm() {
 
   return (
     <div className="p-6 bg-white w-full">
-      <h2 className="text-2xl font-semibold text-gray-800 mb-4">
+      <h3 className="text-xl font-semibold text-gray-700 mb-4">
         Nos envie uma mensagem
-      </h2>
+      </h3>
       <form
         ref={formRef}
         onSubmit={handleSubmit}
         className="space-y-5"
       >
         <label className="block">
-          <span className="text-gray-700">Nome</span>
+          <span className="text-sm text-gray-700">Nome</span>
           <input
             type="text"
             name="user_name"
@@ -45,7 +45,7 @@ export default function ContactForm() {
         </label>
 
         <label className="block">
-          <span className="text-gray-700">Email</span>
+          <span className="text-sm text-gray-700">Email</span>
           <input
             type="email"
             name="user_email"
@@ -55,7 +55,7 @@ export default function ContactForm() {
         </label>
 
         <label className="block">
-          <span className="text-gray-700">Mensagem</span>
+          <span className="text-sm text-gray-700">Mensagem</span>
           <textarea
             name="message"
             required
@@ -66,7 +66,7 @@ export default function ContactForm() {
 
         <button
           type="submit"
-          className="w-full py-3 bg-[#2B6BB1]/70 text-white font-medium rounded-sm shadow hover:bg-[#2B6BB1] transition cursor-pointer"
+          className="w-full py-3 bg-[#2B6BB1]/80 text-white font-medium rounded-sm shadow hover:bg-[#2B6BB1]/90 transition cursor-pointer"
         >
           Enviar Email
         </button>

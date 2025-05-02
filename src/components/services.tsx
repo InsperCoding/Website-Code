@@ -7,29 +7,29 @@ export function Services() {
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
       <ServiceCard
-        icon={<PiDevicesThin></PiDevicesThin>}
+        icon={<PiDevicesThin />}
         title="Dev Web & Mobile"
-        description="Criamos universos interativos com narrativas envolventes, mecânicas divertidas e arte cativante, proporcionando diversão e aprendizado."
+        description="Desenvolvemos sites responsivos e aplicativos nativos, unindo performance, design intuitivo e acessibilidade total."
       />
 
       <ServiceCard
-        icon={<PiGameControllerThin></PiGameControllerThin>}
+        icon={<PiGameControllerThin />}
         title="Game Design"
-        description="Criamos universos interativos com narrativas envolventes, mecânicas divertidas e arte cativante, proporcionando diversão e aprendizado."
+        description="Criamos jogos envolventes do conceito à arte final, equilibrando narrativa, mecânica e experiência de jogador memorável."
       />
 
       <ServiceCard
-        icon={<PiCalendarDotsThin></PiCalendarDotsThin>}
+        icon={<PiCalendarDotsThin />}
         title="Eventos & Workshops"
-        description="Criamos universos interativos com narrativas envolventes, mecânicas divertidas e arte cativante, proporcionando diversão e aprendizado."
+        description="Organizamos eventos imersivos e workshops práticos, combinando conteúdo relevante, interatividade e planejamento."
       />
 
       <ServiceCard
-        icon={<PiBrainThin></PiBrainThin>}
+        icon={<PiBrainThin />}
         title="Inteligência Artificial"
-        description="Criamos universos interativos com narrativas envolventes, mecânicas divertidas e arte cativante, proporcionando diversão e aprendizado."
+        description="Aplicamos IA para automatizar processos e gerar insights, integrando modelos preditivos com soluções escaláveis."
       />
     </div>
-
-  )
+  );
 }
+
