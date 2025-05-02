@@ -15,7 +15,7 @@ const navItems: NavItem[] = [
   { name: "Serviços", targetId: "services" },
   { name: "Parceiros", targetId: "partners" },
   { name: "Projetos", targetId: "projects" },
-  { name: "Contato", targetId: "footer" },
+  { name: "Contato", targetId: "contact" },
 ]
 
 export function Header() {
@@ -41,7 +41,7 @@ export function Header() {
         const section = document.getElementById(targetId)
         if (section) {
           const rect = section.getBoundingClientRect()
-          if (rect.top <= 100 && rect.bottom >= 100) {
+          if (rect.top <= 30 && rect.bottom >= 30) {
             setActiveSection(targetId)
             break
           }
@@ -56,28 +56,16 @@ export function Header() {
   }, [])
 
   return (
-    <header className={`sticky top-0 z-50 w-full flex items-center justify-between px-[5vw] py-[1.5vh] transition-all duration-500 ${isScrolled ? "bg-transparent" : "bg-white"}`}>
-      {/* Logo esquerda */}
-      <div className={`flex items-center transition-all duration-500 ${isScrolled ? "opacity-0 pointer-events-none" : "opacity-100"}`}>
-        <Link href="/" className="relative w-[10vw] h-[5vh] min-w-[80px] min-h-[32px]">
-          <Image
-            src="/assets/code-logo.png"
-            alt="Logo Esquerda"
-            fill
-            className="object-contain"
-          />
-        </Link>
-      </div>
+    <header className="relative px-10 py-3 w-full">
 
-      {/* Navbar centralizada */}
-      <nav className="hidden md:flex items-center bg-gray-100 rounded-full px-2 py-1 drop-shadow-lg">
+      <nav className="fixed top-3 left-1/2 z-50 w-fit flex items-center bg-white rounded-full px-1 py-1 drop-shadow-lg -translate-x-1/2">
         {navItems.map(({ name, targetId }) => {
           const isActive = targetId === activeSection
           return (
             <button
               key={name}
-              className={`flex items-center px-4 py-2 text-m font-medium transition-colors hover:bg-indigo-100 hover:rounded-full ${
-                isActive ? "bg-indigo-100 rounded-full" : ""
+              className={`flex items-center px-4 py-2 font-medium hover:bg-[#327DCF]/10 hover:rounded-full ${
+                isActive ? "bg-[#327DCF]/30 rounded-full" : ""
               }`}
               onClick={() => scrollToSection(targetId)}
             >
@@ -87,17 +75,22 @@ export function Header() {
         })}
       </nav>
 
-      {/* Logo direita */}
-      <div className={`flex items-center justify-end transition-all duration-500 ${isScrolled ? "opacity-0 pointer-events-none" : "opacity-100"}`}>
-        <Link href="/" className="relative w-[10vw] h-[5vh] min-w-[80px] min-h-[32px]">
-          <Image
-            src="/assets/code-logo.png"
-            alt="Logo Direita"
-            fill
-            className="object-contain"
-          />
-        </Link>
+      <div className="flex flex-row justify-between">
+        <div className="flex items-center justify-center">
+          <Link href="/" className="relative w-40 h-14">
+            <Image
+              src="/assets/code-logo.png"
+              alt="Logo Esquerda"
+              fill
+              className="object-contain"
+            />
+          </Link>
+        </div>
+        <div className={`flex items-center justify-center`}>
+          
+        </div>
       </div>
+
     </header>
   )
 }

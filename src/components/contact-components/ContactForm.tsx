@@ -25,50 +25,50 @@ export default function ContactForm() {
   };
 
   return (
-    <div className="max-w-lg mx-auto p-6 bg-white rounded-2xl shadow-xl">
-      <h2 className="text-2xl font-semibold text-gray-800 mb-4 text-center">
-        Contact Us
-      </h2>
+    <div className="p-6 bg-white w-full">
+      <h3 className="text-xl font-semibold text-gray-700 mb-4">
+        Nos envie uma mensagem
+      </h3>
       <form
         ref={formRef}
         onSubmit={handleSubmit}
         className="space-y-5"
       >
         <label className="block">
-          <span className="text-gray-700">Your Name</span>
+          <span className="text-sm text-gray-700">Nome</span>
           <input
             type="text"
             name="user_name"
             required
-            className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
+            className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-sm shadow-sm placeholder-gray-400 focus:outline-none focus:ring-1 focus:ring-[#2B6BB1]/50 focus:border-[#2B6BB1]/50"
           />
         </label>
 
         <label className="block">
-          <span className="text-gray-700">Your Email</span>
+          <span className="text-sm text-gray-700">Email</span>
           <input
             type="email"
             name="user_email"
             required
-            className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
+            className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-sm shadow-sm placeholder-gray-400 focus:outline-none focus:ring-1 focus:ring-[#2B6BB1]/50 focus:border-[#2B6BB1]/50"
           />
         </label>
 
         <label className="block">
-          <span className="text-gray-700">Message</span>
+          <span className="text-sm text-gray-700">Mensagem</span>
           <textarea
             name="message"
             required
             rows={5}
-            className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
+            className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-sm shadow-sm placeholder-gray-400 focus:outline-none focus:ring-1 focus:ring-[#2B6BB1]/50 focus:border-[#2B6BB1]/50"
           />
         </label>
 
         <button
           type="submit"
-          className="w-full py-3 bg-indigo-600 text-white font-medium rounded-lg shadow hover:bg-indigo-700 transition"
+          className="w-full py-3 bg-[#2B6BB1]/80 text-white font-medium rounded-sm shadow hover:bg-[#2B6BB1]/90 transition cursor-pointer"
         >
-          Send Email
+          Enviar Email
         </button>
       </form>
     </div>

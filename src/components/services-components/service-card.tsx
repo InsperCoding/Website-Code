@@ -8,12 +8,12 @@ interface ServiceCardProps {
 
 export function ServiceCard({ icon, title, description }: ServiceCardProps) {
   return (
-    <div className="border-3 border-blue-600 rounded-lg p-6 transition-all hover:shadow-md">
-      <div className="flex items-center mb-4">
-        <div className="text-blue-600 mr-3">{icon}</div>
-        <h3 className="text-xl font-bold text-blue-600">{title}</h3>
+    <div className="text-base bg-white p-5 hover:cursor-default rounded-sm">
+      <div className="text-5xl text-[#2B6BB1]/80 mb-4">
+        {icon}
       </div>
-      <p className="text-blue-600 text-lg ">{description}</p>
+      <h3 className="text-lg font-semibold text-zinc-600 mb-2">{title}</h3>
+      <p className="text-zinc-600 text-sm ">{description}</p>
     </div>
   )
 }
