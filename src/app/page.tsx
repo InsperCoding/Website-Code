@@ -7,19 +7,21 @@ import { AboutUs } from "../components/about";
 import { Services } from "../components/services";
 import { Contact } from "../components/contact"
 import { Projects } from "../components/project";
+import { Wave } from "@/components/wave"
 
 export default function Home() {
   return (
     <div className="flex flex-col items-center justify-start bg-zinc-100">
 
-      <section id = "home" className="w-full bg-white">
+      <section id="home" className="relative w-full bg-white overflow-hidden">
         <Header />
-        <div className="flex items-center justify-center h-[77vh]">
+        <Wave />
+        <div className="flex items-center justify-center h-[50vh] md:h-[77vh]">
           <Slogan />
         </div>
       </section>
       
-      <section id="about" className="flex justify-center w-full bg-[#2B6BB1] pt-10 pb-10 xl: px-5">
+      <section id="about" className="flex justify-center w-full bg-[#3773B5] pt-10 pb-10 xl: px-5">
         <div className="flex items-between justify-center w-full max-w-6xl">
           <AboutUs />
         </div>
