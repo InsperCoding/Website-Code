@@ -10,7 +10,7 @@ export function Footer() {
         flex flex-col md:flex-row md:justify-between md:items-center
         gap-6 md:gap-0
         px-6 sm:px-10 lg:px-24
-        py-10
+        py-25
       "
     >
       {/* endereço: centralizado no mobile, alinhado à esquerda em md+ */}

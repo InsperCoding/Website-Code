@@ -28,7 +28,7 @@ export function AboutUs() {
         </p>
       </div>
 
-      <div>
+      <div className="">
         <div className="flex flex-row items-center gap-2 mb-1">
           <PiTargetBold className="text-xl text-white"></PiTargetBold>
           <h3 className="text-xl font-medium text-white">Missão</h3>
@@ -40,8 +40,8 @@ export function AboutUs() {
         </p>
       </div>
 
-      <div>
-      <div className="flex flex-row items-center gap-2 mb-1">
+      <div className="">
+        <div className="flex flex-row items-center gap-2 mb-1">
           <PiEyeBold className="text-xl text-white"></PiEyeBold>
           <h3 className="text-xl font-medium text-white">Visão</h3>
         </div>

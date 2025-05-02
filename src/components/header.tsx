@@ -76,7 +76,7 @@ export function Header() {
           <button
             key={targetId}
             onClick={() => handleClick(targetId)}
-            className={`px-4 py-2 font-medium rounded-full hover:bg-[#327DCF]/10
+            className={`px-4 py-2 font-medium rounded-full hover:bg-[#327DCF]/10 hover:cursor-pointer
               ${activeSection === targetId ? "bg-[#327DCF]/30" : ""}`}
           >
             {name}
