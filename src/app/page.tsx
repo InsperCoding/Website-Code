@@ -16,7 +16,7 @@ export default function Home() {
       <section id="home" className="relative w-full bg-white overflow-hidden">
         <Header />
         <Wave />
-        <div className="flex items-center justify-center h-[50vh] md:h-[77vh]">
+        <div className="flex items-center justify-center h-[50vh] md:h-[85vh]">
           <Slogan />
         </div>
       </section>
