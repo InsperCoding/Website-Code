@@ -1,4 +1,5 @@
 import { CarouselPlugin } from "@/components/partner-components/carousel-plugin"
+import ContactForm from "@/components/contact-components/ContactForm"
 import { Footer } from "../components/footer"
 import { Header } from "../components/header"
 import { Slogan } from "../components/slogan"
