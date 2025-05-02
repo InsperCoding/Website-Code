@@ -1,13 +1,16 @@
 "use client";
-import { useRef, FormEvent } from "react";
+import { useRef, FormEvent, useState } from "react";
 import emailjs from "@emailjs/browser";
 
 export default function ContactForm() {
   const formRef = useRef<HTMLFormElement>(null);
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
     if (!formRef.current) return;
+
+    setIsLoading(true);
 
     emailjs
       .sendForm(
@@ -16,12 +19,12 @@ export default function ContactForm() {
         formRef.current,
         "z_A3g_9lcY3niEzZG"
       )
-      .then(
-        () => alert("Email sent! 🎉"),
-        (err) => alert("Error: " + err.text)
-      );
-
-    formRef.current.reset();
+      .then(() => {
+        alert("Email enviado! 🎉 Obrigado pelo contato...");
+        formRef.current?.reset();
+      })
+      .catch((err) => alert("Erro: " + err.text))
+      .finally(() => setIsLoading(false));
   };
 
   return (
@@ -29,11 +32,8 @@ export default function ContactForm() {
       <h3 className="text-xl font-semibold text-gray-700 mb-4">
         Nos envie uma mensagem
       </h3>
-      <form
-        ref={formRef}
-        onSubmit={handleSubmit}
-        className="space-y-5"
-      >
+
+      <form ref={formRef} onSubmit={handleSubmit} className="space-y-5">
         <label className="block">
           <span className="text-sm text-gray-700">Nome</span>
           <input
@@ -66,9 +66,36 @@ export default function ContactForm() {
 
         <button
           type="submit"
-          className="w-full py-3 bg-[#2B6BB1]/80 text-white font-medium rounded-sm shadow hover:bg-[#2B6BB1]/90 transition cursor-pointer"
+          disabled={isLoading}
+          className={`w-full py-3 font-medium rounded-sm shadow transition ${
+            isLoading
+              ? "bg-[#2B6BB1]/50 cursor-not-allowed"
+              : "bg-[#2B6BB1]/80 hover:bg-[#2B6BB1]/90 cursor-pointer text-white"
+          } flex items-center justify-center gap-2`}
         >
-          Enviar Email
+          {isLoading && (
+            <svg
+              className="h-5 w-5 animate-spin"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+            >
+              <circle
+                className="opacity-25"
+                cx="12"
+                cy="12"
+                r="10"
+                stroke="currentColor"
+                strokeWidth="4"
+              />
+              <path
+                className="opacity-75"
+                fill="currentColor"
+                d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"
+              />
+            </svg>
+          )}
+          {isLoading ? "Enviando..." : "Enviar Email"}
         </button>
       </form>
     </div>
