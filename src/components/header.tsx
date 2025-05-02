@@ -53,7 +53,12 @@ export function Header() {
         </Link>
 
         <button
-          className="md:hidden text-3xl text-[#327DCF]"
+          className="
+          md:hidden fixed top-4 right-4 z-50
+          w-12 h-12 flex items-center justify-center
+          text-3xl text-[#327DCF]
+         bg-white rounded-full shadow
+        "
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-label="Abrir menu"
         >
