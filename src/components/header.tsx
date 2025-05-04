@@ -48,7 +48,7 @@ export function Header() {
   return (
     <header className="relative w-full py-3 px-4 md:px-10">
       <div className="flex justify-between items-center">
-        <Link href="/" className="relative w-32 h-12 md:w-40 md:h-14">
+        <Link href="/" className="relative w-32 h-12 block md:hidden lg:block">
           <Image src="/assets/code-logo.png" alt="Insper Code" fill className="object-contain" />
         </Link>
 
