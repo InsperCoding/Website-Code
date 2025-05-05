@@ -1,5 +1,4 @@
 import { CarouselPlugin } from "@/components/partner-components/carousel-plugin"
-import ContactForm from "@/components/contact-components/ContactForm"
 import { Footer } from "../components/footer"
 import { Header } from "../components/header"
 import { Slogan } from "../components/slogan"
@@ -8,6 +7,7 @@ import { Services } from "../components/services";
 import { Contact } from "../components/contact"
 import { Projects } from "../components/project";
 import { Wave } from "@/components/wave"
+import { Team } from "@/components/team"
 
 export default function Home() {
   return (
@@ -22,8 +22,9 @@ export default function Home() {
       </section>
       
       <section id="about" className="flex justify-center w-full bg-[#3773B5] pt-10 pb-10 xl: px-5">
-        <div className="flex items-between justify-center w-full max-w-6xl">
+        <div className="flex flex-col items-between justify-center w-full max-w-6xl">
           <AboutUs />
+          <Team />
         </div>
       </section>
 
