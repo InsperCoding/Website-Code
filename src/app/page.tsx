@@ -8,6 +8,7 @@ import { Contact } from "../components/contact"
 import { Projects } from "../components/project";
 import { Wave } from "@/components/wave"
 import { Team } from "@/components/team"
+import {Data} from "@/components/data-components/data"
 
 export default function Home() {
   return (
@@ -25,6 +26,7 @@ export default function Home() {
         <div className="flex flex-col items-between justify-center w-full max-w-6xl">
           <AboutUs />
           <Team />
+          <Data />
         </div>
       </section>
 

@@ -15,7 +15,7 @@ export default function ContactForm() {
     emailjs
       .sendForm(
         "service_k5nms6v",
-        "template_4eal5lt",
+        "template_ye699ln",
         formRef.current,
         "z_A3g_9lcY3niEzZG"
       )
@@ -38,7 +38,7 @@ export default function ContactForm() {
           <span className="text-sm text-gray-700">Nome</span>
           <input
             type="text"
-            name="user_name"
+            name="name" // <- alterado para "name"
             required
             className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-sm shadow-sm placeholder-gray-400 focus:outline-none focus:ring-1 focus:ring-[#2B6BB1]/50 focus:border-[#2B6BB1]/50"
           />
@@ -48,7 +48,17 @@ export default function ContactForm() {
           <span className="text-sm text-gray-700">Email</span>
           <input
             type="email"
-            name="user_email"
+            name="reply_to" // <- este nome é padrão no EmailJS para configurar "responder para"
+            required
+            className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-sm shadow-sm placeholder-gray-400 focus:outline-none focus:ring-1 focus:ring-[#2B6BB1]/50 focus:border-[#2B6BB1]/50"
+          />
+        </label>
+
+        <label className="block">
+          <span className="text-sm text-gray-700">Assunto</span>
+          <input
+            type="text"
+            name="subject" // <- deve corresponder a {{subject}}
             required
             className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-sm shadow-sm placeholder-gray-400 focus:outline-none focus:ring-1 focus:ring-[#2B6BB1]/50 focus:border-[#2B6BB1]/50"
           />
@@ -57,7 +67,7 @@ export default function ContactForm() {
         <label className="block">
           <span className="text-sm text-gray-700">Mensagem</span>
           <textarea
-            name="message"
+            name="message" // <- deve corresponder a {{message}}
             required
             rows={5}
             className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-sm shadow-sm placeholder-gray-400 focus:outline-none focus:ring-1 focus:ring-[#2B6BB1]/50 focus:border-[#2B6BB1]/50"
@@ -98,6 +108,7 @@ export default function ContactForm() {
           {isLoading ? "Enviando..." : "Enviar Email"}
         </button>
       </form>
+
     </div>
   );
 }
