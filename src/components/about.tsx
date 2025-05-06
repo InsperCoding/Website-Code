@@ -7,7 +7,7 @@ export function AboutUs() {
     <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-6">
       <div className="relative w-full h-60 overflow-hidden"> 
         <Image
-          src="/assets/foto-sobre.png"
+          src="/assets/equipes/2025.1/img/fotoequipe.png"
           alt="Insper Code Team"
           fill
           className="object-cover rounded-sm"
