@@ -6,7 +6,7 @@ export function Integrante() {
     <div className="relative w-full">
       <div className="relative h-60 sm:h-65 md:h-70 lg:h-75 w-full">
         <Image
-          src="/assets/equipes/2025.1/img/henriquebomfim.png"
+          src="/assets/equipes/2025.1/img/henriquebomfim.webp"
           alt="integrante"
           fill
           className="object-cover"

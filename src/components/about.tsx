@@ -7,7 +7,7 @@ export function AboutUs() {
     <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-6">
       <div className="relative w-full h-60 overflow-hidden"> 
         <Image
-          src="/assets/equipes/2025.1/img/fotoequipe.png"
+          src="/assets/equipes/2025.1/img/fotoequipe.webp"
           alt="Insper Code Team"
           fill
           className="object-cover rounded-sm"
@@ -15,7 +15,7 @@ export function AboutUs() {
       </div>
       <div className="">
         <h2 className="text-2xl font-semibold mb-3 text-white">Sobre nós</h2>
-        <p className="text-sm text-white/90 mb-1">
+        <p className="text-sm text-white/90 mb-3">
           O Insper Code é a organização estudantil de desenvolvimento de software do Insper. Fundada em 2021, atua
           com os valores de inovação, colaboração e trabalho em equipe para tornar a tecnologia mais acessível,
           promovendo aprendizado prático, inovação e impacto real por meio de projetos alinhados com as demandas da
