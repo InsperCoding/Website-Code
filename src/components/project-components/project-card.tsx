@@ -38,7 +38,7 @@ export default function CardProjeto({
       >
         <article className="bg-white text-black overflow-hidden rounded-sm">
           <div className="relative w-full h-40">
-            <Image src={image} alt={title} fill className="object-cover" />
+            <Image src={image} alt={title} fill className="object-cover" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"/>
           </div>
   
           <div className="flex flex-col p-5 text-zinc-600">
@@ -57,7 +57,15 @@ export default function CardProjeto({
                   <span>{tech.nome}</span>
                 </li>
               ))}
-            </ol>
+                 <Image
+              src="/assets/estoca-ai.png"
+              alt="Estoca Aí"
+              fill
+              sizes="(max-width: 768px) 100vw,
+                     (max-width: 1200px) 50vw,
+                     33vw"
+              className="object-cover"
+            />       </ol>
           </div>
         </article>
       </a>
