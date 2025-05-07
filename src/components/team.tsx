@@ -10,18 +10,20 @@ export function Team() {
 
   return (
     <div className="w-full h-fit text-white pt-6">
-      <button
-        onClick={() => setOpen((prev) => !prev)}
-        className="flex items-center text-sm select-none border-b border-white focus:outline-none hover:cursor-pointer"
-      >
-        <span className="mr-1 pb-1 font-medium">Nossos Membros</span>
-        <MdKeyboardArrowDown
-          className={clsx(
-            "text-lg transition-transform duration-200",
-            open && "rotate-180"
-          )}
-        />
-      </button>
+      <div className="w-full flex justify-center">
+        <button
+          onClick={() => setOpen((prev) => !prev)}
+          className="flex items-center text-xs select-none border-b border-white  opacity-60 focus:outline-none hover:cursor-pointer  hover:opacity-100"
+        >
+          <span className="mr-1 pb-1 font-medium">Nossos Membros</span>
+          <MdKeyboardArrowDown
+            className={clsx(
+              "text-lg transition-transform duration-200",
+              open && "rotate-180"
+            )}
+          />
+        </button>
+      </div>
 
       {open && (
       <section className="pb-6 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-5 gap-x-5 gap-y-8 h-fit mt-5">

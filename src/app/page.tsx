@@ -22,11 +22,11 @@ export default function Home() {
         </div>
       </section>
       
-      <section id="about" className="flex justify-center w-full bg-[#3773B5] pt-10 pb-10 xl: px-5">
+      <section id="about" className="flex justify-center w-full bg-gradient-to-b from-[#3773B5] to-[#1f4575] pt-10 pb-10 xl: px-5">
         <div className="flex flex-col items-between justify-center w-full max-w-6xl">
           <AboutUs />
-          <Team />
           <Data />
+          <Team />
         </div>
       </section>
 
@@ -37,10 +37,7 @@ export default function Home() {
         </div>
       </section>
       
-      <section
-        id="partners"
-        className="flex flex-col items-center w-full mt-10 px-5"
-      >
+      <section id="partners" className="flex flex-col items-center w-full mt-10 px-5">
         <div className="flex flex-col justify-center w-full max-w-6xl">
           <h2 className="text-3xl font-semibold mb-3 text-left text-zinc-700">
             Parceiros

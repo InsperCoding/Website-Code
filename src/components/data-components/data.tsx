@@ -12,20 +12,20 @@ export function Data() {
   const parceiros = useCounter(10, inView);
 
   return (
-    <div ref={ref} className="col-span-1 md:col-span-2 mt-8 bg-white/10 p-6 rounded-lg">
-      <h3 className="text-xl font-semibold text-white mb-4 text-center">Atualmente</h3>
+    <div ref={ref} className="col-span-1 md:col-span-2 mt-5 bg-white/3 p-6 rounded-sm hover:cursor-default">
+      {/*<h3 className="text-3xl font-semibold text-white mb-4 text-center">atualmente</h3>*/}
       <div className="grid grid-cols-2 md:grid-cols-3 gap-6 text-center">
         <div>
-          <p className="text-2xl font-bold text-white">+{membros}</p>
-          <p className="text-sm text-white/80">Membros</p>
+          <p className="text-4xl font-bold text-white">+{membros}</p>
+          <p className="text-sm text-white">Membros</p>
         </div>
         <div>
-          <p className="text-2xl font-bold text-white">+{capacitacao}h</p>
-          <p className="text-sm text-white/80">Capacitação Externa</p>
+          <p className="text-4xl font-bold text-white">+{capacitacao}h</p>
+          <p className="text-sm text-white">Capacitação</p>
         </div>
         <div>
-          <p className="text-2xl font-bold text-white">+{parceiros}</p>
-          <p className="text-sm text-white/80">Parceiros</p>
+          <p className="text-4xl font-bold text-white">+{parceiros}</p>
+          <p className="text-sm text-white">Parceiros</p>
         </div>
       </div>
     </div>
