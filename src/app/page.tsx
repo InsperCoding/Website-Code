@@ -22,7 +22,7 @@ export default function Home() {
         </div>
       </section>
       
-      <section id="about" className="flex justify-center w-full bg-gradient-to-b from-[#3773B5] to-[#1f4575] pt-10 pb-10 xl: px-5">
+      <section id="about" className="flex justify-center w-full bg-gradient-to-b from-[#3773B5] to-[#275483] pt-10 pb-10 xl: px-5">
         <div className="flex flex-col items-between justify-center w-full max-w-6xl">
           <AboutUs />
           <Data />
