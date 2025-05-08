@@ -31,7 +31,6 @@ export function Integrante({ nome, sobrenome, cargo, linkedin, imagem }: Props) 
           <a
             href={linkedin}
             target="_blank"
-            rel="noopener noreferrer"
           >
             <PiLinkedinLogoLight className="text-xl" />
           </a>
