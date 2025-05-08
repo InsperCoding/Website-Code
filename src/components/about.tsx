@@ -47,19 +47,6 @@ export function AboutUs() {
         </p>
       </div>
 
-        
-      <div className="grid grid-cols-2 w-fit gap-x-3 text-sm text-white/90"> 
-        <div className="flex flex-col gap-1">
-          <div>- Colaboração</div>
-          <div>- Proatividade</div>
-          <div>- Excelência</div>
-        </div>
-        
-        <div className="flex flex-col gap-1">
-          <div>- Comunicação</div>
-          <div>- Aprendizado contínuo</div>
-        </div>
-      </div>
     </div>
   ) 
 }
