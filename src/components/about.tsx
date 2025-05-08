@@ -30,7 +30,7 @@ export function AboutUs() {
       <div className="">
         <div className="flex flex-row items-center gap-2 mb-1">
           <PiTargetBold className="text-xl text-white"></PiTargetBold>
-          <h3 className="text-xl font-medium text-white">Missão</h3>
+          <h3 className="text-xl font-medium text-white">Missão e Visão</h3>
         </div>
         <p className="text-sm text-white/90">
         Tornar a tecnologia mais acessível e desenvolver projetos que gerem valor real para a comunidade, promovendo impacto dentro e fora do Insper, com foco em inclusão, inovação e impacto.
@@ -39,14 +39,27 @@ export function AboutUs() {
 
       <div className="">
         <div className="flex flex-row items-center gap-2 mb-1">
-          <PiEyeBold className="text-xl text-white"></PiEyeBold>
-          <h3 className="text-xl font-medium text-white">Visão</h3>
+          <PiEyeBold className="text-xl text-white" />
+          <h3 className="text-xl font-medium text-white">Valores</h3>
         </div>
         <p className="text-sm text-white/90">
         Consolidar o Insper Code como uma empresa estudantil de soluções tecnológicas, capaz de investir no crescimento pessoal e técnico de seus membros, solucionando problemas e transformando sonhos em projetos reais.
         </p>
       </div>
 
+        
+      <div className="grid grid-cols-2 w-fit gap-x-3 text-sm text-white/90"> 
+        <div className="flex flex-col gap-1">
+          <div>- Colaboração</div>
+          <div>- Proatividade</div>
+          <div>- Excelência</div>
+        </div>
+        
+        <div className="flex flex-col gap-1">
+          <div>- Comunicação</div>
+          <div>- Aprendizado contínuo</div>
+        </div>
+      </div>
     </div>
-  )
+  ) 
 }
