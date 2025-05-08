@@ -8,7 +8,7 @@ export function AboutUs() {
       <div className="relative w-full aspect-video overflow-hidden rounded-sm">
         <iframe
           className="absolute inset-0 w-full h-full"
-          src="https://www.youtube.com/embed/d_xUY4s5KCA"
+          src="https://www.youtube.com/embed/LatU6hFbHeA"
           title="Insper Code Team"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
