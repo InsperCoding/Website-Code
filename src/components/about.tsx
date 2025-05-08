@@ -19,42 +19,49 @@ export function AboutUs() {
       <div className="">
         <h2 className="text-2xl font-semibold mb-3 text-white">Sobre nós</h2>
         <p className="text-sm text-white/90 mb-3">
-          O Insper Code é a organização estudantil de desenvolvimento de software do Insper. Fundada em 2021, atua
-          com os valores de inovação, colaboração e trabalho em equipe para tornar a tecnologia mais acessível,
-          promovendo aprendizado prático, inovação e impacto real por meio de projetos alinhados com as demandas da
-          comunidade.
+          O Insper Code é uma entidade estudantil do Insper que capacita membros a se tornarem melhores desenvolvedores, líderes e comunicadores através de projetos práticos.
+          Com orientação de coordenadores e diretores de áreas como RH, projetos, tech e games, os membros aprendem enquanto desenvolvem soluções reais. A organização é liderada por Presidente e Vice-Presidente, garantindo sustentabilidade e parcerias.
+          O objetivo é proporcionar uma experiência próxima do mercado, enriquecendo portfólios e preparando para o futuro profissional.
         </p>
         <p className="text-sm text-white/90">
           Acreditamos no poder da colaboração, no desenvolvimento contínuo e na criação de soluções que gerem valor
-          para dentro e fora do Insper. Seja construindo aplicativos, jogos ou novas ferramentas, buscamos sempre
-          inspirar e capacitar quem deseja transformar ideias em realidade.
+          para dentro e fora do Insper. 
         </p>
       </div>
 
       <div className="">
         <div className="flex flex-row items-center gap-2 mb-1">
           <PiTargetBold className="text-xl text-white"></PiTargetBold>
-          <h3 className="text-xl font-medium text-white">Missão</h3>
+          <h3 className="text-xl font-medium text-white">Missão e Visão</h3>
         </div>
         <p className="text-sm text-white/90">
-          Tornar a tecnologia acessível e transformar sonhos em soluções. Queremos democratizar o acesso à
-          tecnologia, desenvolvendo soluções que gerem impacto real. Nossa missão é formar talentos prontos para
-          inovar e criar mudanças positivas.
+          Tornar a tecnologia mais acessível e desenvolver projetos 
+          que agregam valor para a comunidade. Além disso, tem como visão tornar-se uma 
+          empresa estudantil de soluções tecnológicas capaz de investir em seus membros e 
+          realizar sonhos através de projetos.
         </p>
       </div>
 
       <div className="">
         <div className="flex flex-row items-center gap-2 mb-1">
-          <PiEyeBold className="text-xl text-white"></PiEyeBold>
-          <h3 className="text-xl font-medium text-white">Visão</h3>
+          <PiEyeBold className="text-xl text-white" />
+          <h3 className="text-xl font-medium text-white">Valores</h3>
         </div>
-        <p className="text-sm text-white/90">
-          Ser referência em inovação tecnológica estudantil. Nossa visão é consolidar o Insper Code como a
-          principal organização estudantil de tecnologia, investindo no crescimento dos membros e impulsionando
-          projetos de impacto.
-        </p>
-      </div>
 
+        
+        <div className="grid grid-cols-2 w-fit gap-x-3 text-sm text-white/90"> 
+          <div className="flex flex-col gap-1">
+            <div>- Colaboração</div>
+            <div>- Proatividade</div>
+            <div>- Excelência</div>
+          </div>
+          
+          <div className="flex flex-col gap-1">
+            <div>- Comunicação</div>
+            <div>- Aprendizado contínuo</div>
+          </div>
+        </div>
+      </div>
     </div>
   )
 }
