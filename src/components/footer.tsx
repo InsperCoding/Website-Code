@@ -1,26 +1,29 @@
 import { PiLinkedinLogo, PiInstagramLogo } from "react-icons/pi";
+import Image from "next/image";
 
 export function Footer() {
   return (
     <footer
       id="footer"
-      /* mobile → coluna; md+ → linha  */
       className="
-        w-full bg-zinc-700 text-white text-sm
-        flex flex-col md:flex-row md:justify-between md:items-center
+        w-full bg-zinc-600 text-white text-sm
+        flex flex-col items-center order-1 md:flex-row md:justify-between md:items-center
         gap-6 md:gap-0
         px-6 sm:px-10 lg:px-24
         py-25
       "
     >
-      {/* endereço: centralizado no mobile, alinhado à esquerda em md+ */}
+
       <address className="not-italic leading-relaxed text-center md:text-left">
         <p>Rua Quatá, 300, Vila Olímpia</p>
         <p>São Paulo / SP – Brasil</p>
         <p>CEP 04546-042</p>
       </address>
 
-      {/* redes + copyright: central no mobile, à direita em md+ */}
+      <div className="relative w-80 h-25">
+        <Image src="/assets/logo-branco.png" alt="a" fill className="object-cover" />
+      </div>
+
       <div className="flex flex-col items-center md:items-end gap-3 text-center md:text-right">
         <nav
           aria-label="Redes sociais"

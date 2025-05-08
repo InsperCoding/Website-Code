@@ -5,6 +5,7 @@ import clsx from "clsx"
 import { Integrante } from "./about-components/integrante"
 import { MdKeyboardArrowDown } from "react-icons/md"
 import SimpleSelect from "./ui/select"
+import Image from "next/image"
 
 type IntegranteInfo = {
   nome: string
@@ -14,7 +15,7 @@ type IntegranteInfo = {
   imagem: string
 }
 
-const anosDisponiveis = ["2025.1"]
+const anosDisponiveis = ["2025.1", '2025.2 teste']
 
 function normalizarNome(nome: string, sobrenome: string) {
   return `${nome}${sobrenome}`
@@ -86,7 +87,28 @@ export function Team() {
       </div>
 
       {open && (
-        <section className="pb-6 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-5 gap-x-5 gap-y-8 mt-5">
+        <section className="mt-5">
+        <div className="relative w-full max-w-xl mx-auto mb-8 md:h-75">
+          <Image
+            src={`/assets/equipes/${ano}/img/fotoequipe.webp`}
+            alt="Foto da equipe"
+            width={1500}
+            height={900}
+            className="w-full h-full object-cover"
+          />
+      
+          <article className="absolute scale-85 p-2 bottom-0 right-0 translate-x-4 translate-y-4 z-[10] bg-white text-zinc-700 hover:cursor-default sm:scale-100">
+            <div className="border-b-2">
+              <span className="text-base font-medium">Equipe</span>
+            </div>
+            <div className="flex items-center justify-between gap-1 w-20">
+              <span className="text-sm">{ano}</span>
+              <div/>
+            </div>
+          </article>
+        </div>
+      
+        <div className="pb-6 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-5 gap-x-5 gap-y-8 mt-5">
           {integrantes.map((pessoa, idx) => (
             <Integrante
               key={idx}
@@ -97,7 +119,8 @@ export function Team() {
               imagem={pessoa.imagem}
             />
           ))}
-        </section>
+        </div>
+      </section>
       )}
     </div>
   )

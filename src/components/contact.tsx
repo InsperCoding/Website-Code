@@ -11,7 +11,7 @@ export function Contact() {
       <div className="p-6 pl-0 md:w-1/2 bg-white">
         <div className="relative hidden md:block w-full h-full">
           <Image
-            src="/assets/contact-image.png"
+            src="/assets/toboga.jpg"
             alt="contato"
             fill
             className="object-cover"

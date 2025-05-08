@@ -5,29 +5,25 @@ import { PiEyeBold } from "react-icons/pi";
 export function AboutUs() {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-6">
-      <div className="relative w-full h-60 overflow-hidden"> 
-        <Image
-          src="/assets/equipes/2025.1/img/fotoequipe.webp"
-          alt="Insper Code Team"
-          fill
-          sizes="(max-width: 768px) 100vw,
-                 (max-width: 1200px) 50vw,
-                 33vw"
-          className="object-cover rounded-sm"
+      <div className="relative w-full aspect-video overflow-hidden rounded-sm">
+        <iframe
+          className="absolute inset-0 w-full h-full"
+          src="https://www.youtube.com/embed/d_xUY4s5KCA"
+          title="Insper Code Team"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
         />
       </div>
       <div className="">
         <h2 className="text-2xl font-semibold mb-3 text-white">Sobre nós</h2>
         <p className="text-sm text-white/90 mb-3">
-          O Insper Code é a organização estudantil de desenvolvimento de software do Insper. Fundada em 2021, atua
-          com os valores de inovação, colaboração e trabalho em equipe para tornar a tecnologia mais acessível,
-          promovendo aprendizado prático, inovação e impacto real por meio de projetos alinhados com as demandas da
-          comunidade.
+        O Insper Code é a organização estudantil que capacita seus membros a se tornarem desenvolvedores, líderes e comunicadores mais completos, por meio de projetos práticos e colaborativos. Fundado em 2021, atua em duas frentes principais: Tech e Game Dev.
+        </p>
+        <p className="text-sm text-white/90 mb-3">
+        Os membros se engajam nos projetos propostos pelas diretorias de cada área, aprendendo na prática enquanto desenvolvem soluções reais. Esses projetos são acompanhados por coordenadores que oferecem orientação estratégica ao longo do processo.
         </p>
         <p className="text-sm text-white/90">
-          Acreditamos no poder da colaboração, no desenvolvimento contínuo e na criação de soluções que gerem valor
-          para dentro e fora do Insper. Seja construindo aplicativos, jogos ou novas ferramentas, buscamos sempre
-          inspirar e capacitar quem deseja transformar ideias em realidade.
+        Nosso objetivo é oferecer uma experiência próxima à do mercado, enriquecendo o portfólio dos participantes e preparando-os para os desafios do futuro profissional.
         </p>
       </div>
 
@@ -37,9 +33,7 @@ export function AboutUs() {
           <h3 className="text-xl font-medium text-white">Missão</h3>
         </div>
         <p className="text-sm text-white/90">
-          Tornar a tecnologia acessível e transformar sonhos em soluções. Queremos democratizar o acesso à
-          tecnologia, desenvolvendo soluções que gerem impacto real. Nossa missão é formar talentos prontos para
-          inovar e criar mudanças positivas.
+        Tornar a tecnologia mais acessível e desenvolver projetos que gerem valor real para a comunidade, promovendo impacto dentro e fora do Insper, com foco em inclusão, inovação e impacto.
         </p>
       </div>
 
@@ -49,9 +43,7 @@ export function AboutUs() {
           <h3 className="text-xl font-medium text-white">Visão</h3>
         </div>
         <p className="text-sm text-white/90">
-          Ser referência em inovação tecnológica estudantil. Nossa visão é consolidar o Insper Code como a
-          principal organização estudantil de tecnologia, investindo no crescimento dos membros e impulsionando
-          projetos de impacto.
+        Consolidar o Insper Code como uma empresa estudantil de soluções tecnológicas, capaz de investir no crescimento pessoal e técnico de seus membros, solucionando problemas e transformando sonhos em projetos reais.
         </p>
       </div>
 

@@ -9,25 +9,25 @@ export function Services() {
       <ServiceCard
         icon={<PiDevicesThin />}
         title="Dev Web & Mobile"
-        description="Desenvolvemos sites responsivos e aplicativos nativos, unindo performance, design intuitivo e acessibilidade total."
+        description="Desenvolvemos sites e aplicativos responsivos, combinando performance otimizada, design intuitivo e acessibilidade avançada para o usuário."
       />
 
       <ServiceCard
         icon={<PiGameControllerThin />}
         title="Game Design"
-        description="Criamos jogos envolventes do conceito à arte final, equilibrando narrativa, mecânica e experiência de jogador memorável."
+        description="Criamos jogos envolventes, do conceito à arte final, unindo narrativa cativante, mecânicas estruturadas e experiências memoráveis ao jogador."
       />
 
       <ServiceCard
         icon={<PiCalendarDotsThin />}
         title="Eventos & Workshops"
-        description="Organizamos eventos imersivos e workshops práticos, combinando conteúdo relevante, interatividade e planejamento."
+        description="Realizamos eventos imersivos e workshops dinâmicos, alinhando conteúdos relevantes ao mercado com interatividade estratégica e aprendizado prático."
       />
 
       <ServiceCard
         icon={<PiBrainThin />}
         title="Inteligência Artificial"
-        description="Aplicamos IA para automatizar processos e gerar insights, integrando modelos preditivos com soluções escaláveis."
+        description="Utilizamos Inteligência Artificial para automatizar tarefas, gerar insights estratégicos e integrar modelos preditivos a soluções escaláveis."
       />
     </div>
   );

@@ -30,7 +30,7 @@ export default function ContactForm() {
   return (
     <div className="p-6 bg-white w-full">
       <h3 className="text-xl font-semibold text-gray-700 mb-4">
-        Nos envie uma mensagem
+        Entre em contato com o Insper Code
       </h3>
 
       <form ref={formRef} onSubmit={handleSubmit} className="space-y-5">
