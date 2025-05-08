@@ -62,7 +62,7 @@ export function Team() {
             open ? "opacity-100" : "opacity-60"
           )}
         >
-          <span className="mr-1 pb-1 font-medium">Integrantes</span>
+          <span className="mr-1 pb-1 font-medium">Equipe</span>
           <MdKeyboardArrowDown
             className={clsx(
               "text-lg transition-transform duration-200",

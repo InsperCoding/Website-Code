@@ -41,36 +41,35 @@ export function Projects() {
           ]}
         />
         <CardProjeto
-        image="/assets/help-the-fox.png"
-        href="https://www.google.com/"
-        title="Help The Fox"
-        descricao="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo explicabo quis consectetur, voluptatum expedita quisquam, quia minus nemo similique, inventore modi asper"
-        tecnologias={[
-            {
-              nome: "Godot",
-              icone: <SiGodotengine />,
-              cor: {
-                border: "border-blue-600",  // antes: border-blue-500
-                text:   "text-blue-600",    // antes: text-blue-500
+          image="/assets/help-the-fox.png"
+          href="https://www.google.com/"
+          title="Help The Fox"
+          descricao="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo explicabo quis consectetur, voluptatum expedita quisquam, quia minus nemo similique, inventore modi asper"
+          tecnologias={[
+              {
+                nome: "Godot",
+                icone: <SiGodotengine />,
+                cor: {
+                  border: "border-blue-600",  // antes: border-blue-500
+                  text:   "text-blue-600",    // antes: text-blue-500
+                },
               },
-            },
-            {
-              nome: "Photoshop",
-              icone: <SiAdobephotoshop />,
-              cor: {
-                border: "border-sky-600",   // antes: border-green-400
-                text:   "text-sky-600",     // antes: text-green-400
+              {
+                nome: "Photoshop",
+                icone: <SiAdobephotoshop />,
+                cor: {
+                  border: "border-sky-600",   // antes: border-green-400
+                  text:   "text-sky-600",     // antes: text-green-400
+                },
               },
-            },
-          ]}
-          
-        />
+            ]}
+          />
         <CardProjeto
-        image="/assets/finq-logo.png"
-        href="https://www.google.com/"
-        title="FinQ"
-        descricao="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo explicabo quis consectetur, voluptatum expedita quisquam, quia minus nemo similique, inventore modi asper"
-        tecnologias={[
+          image="/assets/finq-logo.png"
+          href="https://www.google.com/"
+          title="FinQ"
+          descricao="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo explicabo quis consectetur, voluptatum expedita quisquam, quia minus nemo similique, inventore modi asper"
+          tecnologias={[
             {
               nome: "Figma",
               icone: <FaFigma />,
