@@ -15,7 +15,7 @@ type IntegranteInfo = {
   imagem: string
 }
 
-const anosDisponiveis = ["2025.1", '2025.2 teste']
+const anosDisponiveis = ["2025.1", "2025.2 teste"]
 
 function normalizarNome(nome: string, sobrenome: string) {
   return `${nome}${sobrenome}`
@@ -27,7 +27,8 @@ function normalizarNome(nome: string, sobrenome: string) {
 export function Team() {
   const [open, setOpen] = useState(false)
   const [ano, setAno] = useState(anosDisponiveis[0])
-  const [integrantes, setIntegrantes] = useState<IntegranteInfo[]>([])
+  const [gestao, setGestao] = useState<IntegranteInfo[]>([])
+  const [coordenadores, setCoordenadores] = useState<IntegranteInfo[]>([])
 
   useEffect(() => {
     fetch(`/assets/equipes/${ano}/integrantes.csv`)
@@ -49,7 +50,31 @@ export function Team() {
             imagem: `/assets/equipes/${ano}/img/${normalizarNome(obj.Nome, obj.Sobrenome)}.webp`
           }
         })
-        setIntegrantes(dados)
+
+        const ordenado = dados.sort((a, b) => {
+          const getPeso = (cargo: string) => {
+            const c = cargo.toLowerCase()
+            if (c.includes("presidente")) return 0
+            if (c.includes("vice")) return 1
+            if (c.includes("diretor")) return 2
+            if (c.includes("coordenador")) return 3
+            return 4
+          }
+          return getPeso(a.cargo) - getPeso(b.cargo)
+        })
+
+        const listaGestao = ordenado.filter(p =>
+          p.cargo.toLowerCase().includes("presidente") ||
+          p.cargo.toLowerCase().includes("vice") ||
+          p.cargo.toLowerCase().includes("diretor")
+        )
+
+        const listaCoordenadores = ordenado.filter(p =>
+          p.cargo.toLowerCase().includes("coordenador")
+        )
+
+        setGestao(listaGestao)
+        setCoordenadores(listaCoordenadores)
       })
   }, [ano])
 
@@ -88,39 +113,64 @@ export function Team() {
 
       {open && (
         <section className="mt-5">
-        <div className="relative w-full max-w-xl mx-auto mb-8 md:h-75">
-          <Image
-            src={`/assets/equipes/${ano}/img/fotoequipe.webp`}
-            alt="Foto da equipe"
-            width={1500}
-            height={900}
-            className="w-full h-full object-cover"
-          />
-      
-          <article className="absolute scale-85 p-2 bottom-0 right-0 translate-x-4 translate-y-4 z-[10] bg-white text-zinc-700 hover:cursor-default sm:scale-100">
-            <div className="border-b-2">
-              <span className="text-base font-medium">Equipe</span>
-            </div>
-            <div className="flex items-center justify-between gap-1 w-20">
-              <span className="text-sm">{ano}</span>
-              <div/>
-            </div>
-          </article>
-        </div>
-      
-        <div className="pb-6 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-5 gap-x-5 gap-y-8 mt-5">
-          {integrantes.map((pessoa, idx) => (
-            <Integrante
-              key={idx}
-              nome={pessoa.nome}
-              sobrenome={pessoa.sobrenome}
-              cargo={pessoa.cargo}
-              linkedin={pessoa.linkedin}
-              imagem={pessoa.imagem}
+          <div className="relative w-full max-w-xl mx-auto mb-8 md:h-75">
+            <Image
+              src={`/assets/equipes/${ano}/img/fotoequipe.webp`}
+              alt="Foto da equipe"
+              width={1500}
+              height={900}
+              className="w-full h-full object-cover"
             />
-          ))}
-        </div>
-      </section>
+
+            <article className="absolute scale-85 p-2 bottom-0 right-0 translate-x-4 translate-y-4 z-[10] bg-white text-zinc-700 hover:cursor-default sm:scale-100">
+              <div className="border-b-2">
+                <span className="text-base font-medium">Equipe</span>
+              </div>
+              <div className="flex items-center justify-between gap-1 w-20">
+                <span className="text-sm">{ano}</span>
+                <div />
+              </div>
+            </article>
+          </div>
+
+          {/* Seção Gestão */}
+          {gestao.length > 0 && (
+            <section className="w-full max-w-screen-xl mx-auto mt-12">
+              <h2 className="text-xl font-semibold border-b pb-1 mb-4">Gestão</h2>
+              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-5 gap-x-5 gap-y-8">
+                {gestao.map((pessoa, idx) => (
+                  <Integrante
+                    key={idx}
+                    nome={pessoa.nome}
+                    sobrenome={pessoa.sobrenome}
+                    cargo={pessoa.cargo}
+                    linkedin={pessoa.linkedin}
+                    imagem={pessoa.imagem}
+                  />
+                ))}
+              </div>
+            </section>
+          )}
+
+          {/* Seção Coordenadores */}
+          {coordenadores.length > 0 && (
+            <section className="w-full max-w-screen-xl mx-auto mt-12">
+              <h2 className="text-xl font-semibold border-b pb-1 mb-4">Coordenadores</h2>
+              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-5 gap-x-5 gap-y-8">
+                {coordenadores.map((pessoa, idx) => (
+                  <Integrante
+                    key={idx}
+                    nome={pessoa.nome}
+                    sobrenome={pessoa.sobrenome}
+                    cargo={pessoa.cargo}
+                    linkedin={pessoa.linkedin}
+                    imagem={pessoa.imagem}
+                  />
+                ))}
+              </div>
+            </section>
+          )}
+        </section>
       )}
     </div>
   )
