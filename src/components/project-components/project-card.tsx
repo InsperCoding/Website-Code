@@ -42,8 +42,8 @@ export default function CardProjeto({
           </div>
   
           <div className="flex flex-col p-5 text-zinc-600">
-            <h3 className="text-lg font-semibold mb-2">{title}</h3>
-            <p className="text-sm">{descricao}</p>
+            <h3 className="text-xl font-semibold mb-2">{title}</h3>
+            <p className="text-base">{descricao}</p>
   
             <ol className="flex flex-row space-x-2 mt-3">
               {tecnologias.map((tech, index) => (

@@ -29,13 +29,13 @@ export default function ContactForm() {
 
   return (
     <div className="p-6 bg-white w-full">
-      <h3 className="text-xl font-semibold text-gray-700 mb-4">
+      <h3 className="text-2xl font-semibold text-gray-700 mb-4">
         Entre em contato com o Insper Code
       </h3>
 
       <form ref={formRef} onSubmit={handleSubmit} className="space-y-5">
         <label className="block">
-          <span className="text-sm text-gray-700">Nome</span>
+          <span className="text-base text-gray-700">Nome</span>
           <input
             type="text"
             name="name" // <- alterado para "name"
@@ -45,7 +45,7 @@ export default function ContactForm() {
         </label>
 
         <label className="block">
-          <span className="text-sm text-gray-700">Email</span>
+          <span className="text-base text-gray-700">Email</span>
           <input
             type="email"
             name="reply_to" // <- este nome é padrão no EmailJS para configurar "responder para"
@@ -55,7 +55,7 @@ export default function ContactForm() {
         </label>
 
         <label className="block">
-          <span className="text-sm text-gray-700">Assunto</span>
+          <span className="text-base text-gray-700">Assunto</span>
           <input
             type="text"
             name="subject" // <- deve corresponder a {{subject}}
@@ -65,7 +65,7 @@ export default function ContactForm() {
         </label>
 
         <label className="block">
-          <span className="text-sm text-gray-700">Mensagem</span>
+          <span className="text-base text-gray-700">Mensagem</span>
           <textarea
             name="message" // <- deve corresponder a {{message}}
             required
@@ -77,7 +77,7 @@ export default function ContactForm() {
         <button
           type="submit"
           disabled={isLoading}
-          className={`w-full py-3 font-medium rounded-sm shadow transition ${
+          className={`w-full py-3 text-base font-medium rounded-sm shadow transition ${
             isLoading
               ? "bg-[#2B6BB1]/50 cursor-not-allowed"
               : "bg-[#2B6BB1]/80 hover:bg-[#2B6BB1]/90 cursor-pointer text-white"

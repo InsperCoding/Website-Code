@@ -79,7 +79,7 @@ export function Team() {
   }, [ano])
 
   return (
-    <div className="w-full h-fit text-white pt-6">
+    <div className="w-full h-fit text-white pt-8">
       <div className="w-full flex flex-col items-center gap-3">
         <button
           onClick={() => setOpen(prev => !prev)}
@@ -88,7 +88,7 @@ export function Team() {
             open ? "opacity-100" : "opacity-60"
           )}
         >
-          <span className="mr-1 pb-1 font-medium">Equipe</span>
+          <span className="mr-1 pb-1 text-base font-medium">Equipe</span>
           <MdKeyboardArrowDown
             className={clsx(
               "text-lg transition-transform duration-200",
@@ -113,7 +113,7 @@ export function Team() {
 
       {open && (
         <section className="mt-5">
-          <div className="relative w-full max-w-xl mx-auto mb-8 md:h-75">
+          <div className="relative w-full max-w-3xl mx-auto mb-8 md:h-100">
             <Image
               src={`/assets/equipes/${ano}/img/fotoequipe.webp`}
               alt="Foto da equipe"

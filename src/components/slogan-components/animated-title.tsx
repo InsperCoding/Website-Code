@@ -8,7 +8,7 @@ export function AnimatedTitle() {
       <h1>
         <span className="text-[#327DCF] inline-block font-normal ">
           <ReactTyped 
-            strings={["Colaboração", "Proatividade", "Excelência", "Comunicação", "Aprendizado contínuo"]} 
+            strings={["Comunicação", "Excelência", "Proatividade", "Aprendizado contínuo", "Colaboração"]} 
             typeSpeed={70}
             backSpeed={40}
             backDelay={1000}

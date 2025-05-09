@@ -10,7 +10,7 @@ export function Footer() {
         flex flex-col items-center order-1 md:flex-row md:justify-between md:items-center
         gap-6 md:gap-0
         px-6 sm:px-10 lg:px-24
-        py-25
+        py-10
       "
     >
 

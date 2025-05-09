@@ -12,7 +12,7 @@ export function Data() {
   const parceiros = useCounter(10, inView);
 
   return (
-    <div ref={ref} className="col-span-1 md:col-span-2 mt-5 bg-white/3 p-6 rounded-sm hover:cursor-default">
+    <div ref={ref} className="col-span-1 md:col-span-2 mt-8 bg-white/3 p-6 rounded-sm hover:cursor-default">
       {/*<h3 className="text-3xl font-semibold text-white mb-4 text-center">atualmente</h3>*/}
       <div className="grid grid-cols-2 md:grid-cols-3 gap-6 text-center">
         <div>
