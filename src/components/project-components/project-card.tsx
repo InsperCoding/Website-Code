@@ -12,7 +12,6 @@ interface IconeProjeto {
 
 interface ProjetoProps {
     image: string;
-    href: string;
     title: string;
     descricao: string;
     tecnologias: IconeProjeto[];

@@ -13,7 +13,6 @@ export function Projects() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 group">
         <CardProjeto
         image="/assets/estoca-ai.png"
-        href="https://www.google.com/"
         title="Estoca Aí"
         descricao="Estoca Aí é um MVP de aplicativo desenvolvido para facilitar a organização e gestão de compras e da despensa doméstica. A proposta do projeto é ajudar os usuários a manterem o controle dos itens armazenados em casa, evitando desperdícios e otimizando o planejamento de compras. Com uma interface simples e intuitiva, o MVP buscou validar a viabilidade de uma solução digital voltada à rotina doméstica de consumo"
         tecnologias={[
@@ -45,7 +44,6 @@ export function Projects() {
         />
         <CardProjeto
           image="/assets/help-the-fox.png"
-          href="https://www.google.com/"
           title="Help The Fox"
           descricao="Help the Fox foi um jogo desenvolvido em Godot como parte de uma iniciativa do Insper em parceria com o Code para arrecadar doações ao programa de bolsas. O projeto propôs uma experiência híbrida de escape room, combinando enigmas físicos e digitais para desafiar os participantes a escaparem em até 30 minutos. Desenvolvido em duas semanas, contou com consultoria do Escape 60 para garantir uma experiência divertida e acessível."
           tecnologias={[
@@ -69,9 +67,8 @@ export function Projects() {
           />
         <CardProjeto
           image="/assets/InvestigaAI.png"
-          href="https://www.google.com/"
           title="InvestigaAI"
-          descricao="O Investiga AI é uma plataforma desenvolvida para automatizar e centralizar consultas de IPs, oferecendo uma solução robusta para investigações cibernéticas. O objetivo principal do projeto é otimizar o tempo de processamento, proporcionando mais eficiência aos analistas e auxiliando a perícia digital em investigações sensíveis. A plataforma garante segurança, precisão e confiabilidade no tratamento de dados."
+          descricao="O Investiga AI é uma plataforma desenvolvida para automatizar e centralizar consultas de IPs, oferecendo uma solução robusta para investigações cibernéticas. O objetivo principal do projeto é otimizar o tempo de processamento, proporcionando mais eficiência aos analistas e auxiliando a perícia digital em investigações sensíveis. A plataforma garante segurança, precisão e confiabilidade no tratamento de dados. Site: https://investiga.seg.br/"
           tecnologias={[
             {
               nome: "FastAPI",
