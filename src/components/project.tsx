@@ -68,7 +68,7 @@ export function Projects() {
         <CardProjeto
           image="/assets/InvestigaAI.png"
           title="InvestigaAI"
-          descricao="O Investiga AI é uma plataforma desenvolvida para automatizar e centralizar consultas de IPs, oferecendo uma solução robusta para investigações cibernéticas. O objetivo principal do projeto é otimizar o tempo de processamento, proporcionando mais eficiência aos analistas e auxiliando a perícia digital em investigações sensíveis. A plataforma garante segurança, precisão e confiabilidade no tratamento de dados. Site: https://investiga.seg.br/"
+          descricao="O Investiga AI é uma plataforma desenvolvida para automatizar e centralizar consultas de IPs, oferecendo uma solução robusta para investigações cibernéticas. O objetivo principal do projeto é otimizar o tempo de processamento, proporcionando mais eficiência aos analistas e auxiliando a perícia digital em investigações sensíveis. A plataforma garante segurança, precisão e confiabilidade no tratamento de dados."
           tecnologias={[
             {
               nome: "FastAPI",
