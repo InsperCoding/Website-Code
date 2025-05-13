@@ -30,37 +30,37 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="services" className="flex flex-col items-center w-full mt-10 xl: px-5">
+      <section id="services" className="flex flex-col items-center w-full mt-15 xl: px-5">
         <div className="flex flex-col items-between justify-center w-full max-w-6xl">
-          <h2 className="text-3xl font-semibold mb-3 text-left text-zinc-700">Serviços</h2>
+          <h2 className="text-4xl font-semibold mb-3 text-left text-zinc-700">Serviços</h2>
           <Services />
         </div>
       </section>
       
-      <section id="partners" className="flex flex-col items-center w-full mt-10 px-5">
+      <section id="partners" className="flex flex-col items-center w-full mt-20 px-5">
         <div className="flex flex-col justify-center w-full max-w-6xl">
-          <h2 className="text-3xl font-semibold mb-3 text-left text-zinc-700">
+          <h2 className="text-4xl font-semibold mb-3 text-left text-zinc-700">
             Parceiros
           </h2>
           <CarouselPlugin />
         </div>
       </section>
 
-      <section id="projects" className="flex flex-col items-center w-full mt-10 xl: px-5">
+      <section id="projects" className="flex flex-col items-center w-full mt-20 xl: px-5">
         <div className="flex flex-col items-between justify-center w-full max-w-6xl">
-          <h2 className="text-3xl font-semibold mb-3 text-left text-zinc-700">Projetos</h2>
+          <h2 className="text-4xl font-semibold mb-3 text-left text-zinc-700">Projetos</h2>
           <Projects/>
         </div>
       </section>
 
-      <section id="contact" className="flex flex-col items-center w-full mt-10 px-5">
+      <section id="contact" className="flex flex-col items-center w-full mt-20 px-5">
         <div className="flex flex-col justify-center w-full max-w-6xl">
-          <h2 className="text-3xl font-semibold mb-3 text-left w-full text-zinc-700">Contato</h2>
+          <h2 className="text-4xl font-semibold mb-3 text-left w-full text-zinc-700">Contato</h2>
           <Contact />
         </div>
       </section>
 
-      <section id="footer" className="flex flex-col items-center w-full mt-10">
+      <section id="footer" className="flex flex-col items-center w-full mt-20">
         <Footer />
       </section>
     </div>
