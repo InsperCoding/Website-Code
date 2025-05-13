@@ -5,6 +5,7 @@ import emailjs from "@emailjs/browser";
 export default function ContactForm() {
   const formRef = useRef<HTMLFormElement>(null);
   const [isLoading, setIsLoading] = useState(false);
+  const [showModal, setShowModal] = useState(false);
 
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
@@ -20,7 +21,7 @@ export default function ContactForm() {
         "FfuI-M8vOxguqgfmK"
       )
       .then(() => {
-        alert("Email enviado! 🎉 Obrigado pelo contato...");
+        setShowModal(true);
         formRef.current?.reset();
       })
       .catch((err) => alert("Erro: " + err.text))
@@ -28,7 +29,7 @@ export default function ContactForm() {
   };
 
   return (
-    <div className="p-6 bg-white w-full">
+    <div className="p-6 bg-white w-full relative">
       <h3 className="text-2xl font-semibold text-gray-700 mb-4">
         Entre em contato com o Insper Code
       </h3>
@@ -38,7 +39,7 @@ export default function ContactForm() {
           <span className="text-base text-gray-700">Nome</span>
           <input
             type="text"
-            name="name" // <- alterado para "name"
+            name="name"
             required
             className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-sm shadow-sm placeholder-gray-400 focus:outline-none focus:ring-1 focus:ring-[#2B6BB1]/50 focus:border-[#2B6BB1]/50"
           />
@@ -48,7 +49,7 @@ export default function ContactForm() {
           <span className="text-base text-gray-700">Email</span>
           <input
             type="email"
-            name="reply_to" // <- este nome é padrão no EmailJS para configurar "responder para"
+            name="reply_to"
             required
             className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-sm shadow-sm placeholder-gray-400 focus:outline-none focus:ring-1 focus:ring-[#2B6BB1]/50 focus:border-[#2B6BB1]/50"
           />
@@ -58,7 +59,7 @@ export default function ContactForm() {
           <span className="text-base text-gray-700">Assunto</span>
           <input
             type="text"
-            name="subject" // <- deve corresponder a {{subject}}
+            name="subject"
             required
             className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-sm shadow-sm placeholder-gray-400 focus:outline-none focus:ring-1 focus:ring-[#2B6BB1]/50 focus:border-[#2B6BB1]/50"
           />
@@ -67,7 +68,7 @@ export default function ContactForm() {
         <label className="block">
           <span className="text-base text-gray-700">Mensagem</span>
           <textarea
-            name="message" // <- deve corresponder a {{message}}
+            name="message"
             required
             rows={5}
             className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-sm shadow-sm placeholder-gray-400 focus:outline-none focus:ring-1 focus:ring-[#2B6BB1]/50 focus:border-[#2B6BB1]/50"
@@ -109,6 +110,25 @@ export default function ContactForm() {
         </button>
       </form>
 
+      {/* Modal de confirmação */}
+      {showModal && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50">
+          <div className="bg-white rounded-lg p-6 max-w-sm w-full shadow-lg text-center">
+            <h2 className="text-xl font-semibold text-green-600 mb-2">
+              Email enviado!
+            </h2>
+            <p className="text-gray-700">
+              🎉 Obrigado pelo contato. Em breve entraremos em contato.
+            </p>
+            <button
+              onClick={() => setShowModal(false)}
+              className="mt-4 px-4 py-2 bg-[#2B6BB1] text-white rounded hover:bg-[#2B6BB1]/90 transition"
+            >
+              Ok
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

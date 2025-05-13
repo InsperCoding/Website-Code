@@ -4,13 +4,25 @@ import * as React from "react"
 import { PartnerLogo } from "./partner-logo";
 
 const LogoList = [
-    "/assets/intelli-gamelab.jpeg",
+    "/assets/intelli-gamelab.png",
     "/assets/InvestigaAI.png",
     "/assets/fund-estudar.jpeg",
     "/assets/in-health.jpeg",
-    "/assets/ibs-americas.jpeg",
-    "/assets/insper-sec.jpeg",
+    "/assets/ibs-americas.png",
+    "/assets/insper-sec.png",
     "/assets/na-pratica.jpeg",
+    "/assets/logoparceiros.png",
+    "/assets/insperdata.png",
+    "/assets/intelli-gamelab.png",
+    "/assets/InvestigaAI.png",
+    "/assets/fund-estudar.jpeg",
+    "/assets/in-health.jpeg",
+    "/assets/ibs-americas.png",
+    "/assets/insper-sec.png",
+    "/assets/na-pratica.jpeg",
+    "/assets/logoparceiros.png",
+    "/assets/insperdata.png",
+    
 ]
 
 export function CarouselPlugin() {

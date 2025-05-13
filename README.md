@@ -1,36 +1,56 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Insper Code - Site Institucional
 
-## Getting Started
+![Next.js](https://img.shields.io/badge/Next.js-13+-black?logo=next.js)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.3.3-%2338B2AC?logo=tailwind-css)
+![React Typed](https://img.shields.io/badge/React_Typed-2.0.5-%2300D8FF?logo=react)
 
-First, run the development server:
+Site institucional da organização estudantil Insper Code, apresentando serviços, projetos, equipe e formulário de contato interativo com componentes modernos.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🛠 Tecnologias Utilizadas
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Core
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Next.js 13+** - Renderização híbrida (SSG/SSR)
+- **Tailwind CSS** - Sistema de design atômico
+- **TypeScript** - Tipagem avançada
+- **React Icons** - Biblioteca de ícones vetoriais
+- **OKLCH** - Gerenciamento de cores moderno
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Componentização
 
-## Learn More
+- **Radix UI** - Componentes acessíveis (Dropdowns, Cards)
+- **React-Typed** - Animações de texto dinâmico
+- **class-variance-authority** - Sistema de variantes para botões
+- **react-intersection-observer** - Detecção de elementos visíveis
 
-To learn more about Next.js, take a look at the following resources:
+### Dados Dinâmicos
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **CSV Integration** - Carregamento de equipe via arquivos .csv
+- **EmailJS** - Envio de emails sem backend
+- **Next Image Optimization** - Otimização automática de assets
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🚀 Execução Local
 
-## Deploy on Vercel
+### Pré-requisitos
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Node.js 18+
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Passo a Passo
+
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/InsperCoding/Website-Code
+   ```
+2. Instale as dependências:
+   ```bash
+   npm install
+   # ou
+   yarn install
+   ```
+3. Inicie o servidor de desenvolvimento:
+   ```bash
+   npm run dev
+   # ou
+   yarn dev
+   ```
+4. Acesse no navegador: http://localhost:3000
