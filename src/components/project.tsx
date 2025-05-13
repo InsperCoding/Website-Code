@@ -4,6 +4,9 @@ import { TbBrandNextjs } from "react-icons/tb";
 import { IoLogoNodejs } from "react-icons/io5";
 import { SiGodotengine } from "react-icons/si";
 import { SiAdobephotoshop } from "react-icons/si";
+import { SiFastapi } from "react-icons/si";
+import { FaHtml5 } from "react-icons/fa";
+import { FaCss3Alt } from "react-icons/fa";
 
 export function Projects() {
     return (
@@ -12,7 +15,7 @@ export function Projects() {
         image="/assets/estoca-ai.png"
         href="https://www.google.com/"
         title="Estoca Aí"
-        descricao="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo explicabo quis consectetur, voluptatum expedita quisquam, quia minus nemo similique, inventore modi asper"
+        descricao="Estoca Aí é um MVP de aplicativo desenvolvido para facilitar a organização e gestão de compras e da despensa doméstica. A proposta do projeto é ajudar os usuários a manterem o controle dos itens armazenados em casa, evitando desperdícios e otimizando o planejamento de compras. Com uma interface simples e intuitiva, o MVP buscou validar a viabilidade de uma solução digital voltada à rotina doméstica de consumo"
         tecnologias={[
             {
               nome: "Figma",
@@ -44,7 +47,7 @@ export function Projects() {
           image="/assets/help-the-fox.png"
           href="https://www.google.com/"
           title="Help The Fox"
-          descricao="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo explicabo quis consectetur, voluptatum expedita quisquam, quia minus nemo similique, inventore modi asper"
+          descricao="Help the Fox foi um jogo desenvolvido em Godot como parte de uma iniciativa do Insper em parceria com o Code para arrecadar doações ao programa de bolsas. O projeto propôs uma experiência híbrida de escape room, combinando enigmas físicos e digitais para desafiar os participantes a escaparem em até 30 minutos. Desenvolvido em duas semanas, contou com consultoria do Escape 60 para garantir uma experiência divertida e acessível."
           tecnologias={[
               {
                 nome: "Godot",
@@ -65,33 +68,33 @@ export function Projects() {
             ]}
           />
         <CardProjeto
-          image="/assets/finq-logo.png"
+          image="/assets/InvestigaAI.png"
           href="https://www.google.com/"
-          title="FinQ"
-          descricao="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo explicabo quis consectetur, voluptatum expedita quisquam, quia minus nemo similique, inventore modi asper"
+          title="InvestigaAI"
+          descricao="O Investiga AI é uma plataforma desenvolvida para automatizar e centralizar consultas de IPs, oferecendo uma solução robusta para investigações cibernéticas. O objetivo principal do projeto é otimizar o tempo de processamento, proporcionando mais eficiência aos analistas e auxiliando a perícia digital em investigações sensíveis. A plataforma garante segurança, precisão e confiabilidade no tratamento de dados."
           tecnologias={[
             {
-              nome: "Figma",
-              icone: <FaFigma />,
+              nome: "FastAPI",
+              icone: <SiFastapi />,
               cor: {
-                border: "border-pink-600",  // antes: border-pink-500
-                text:   "text-pink-600",    // antes: text-pink-500
+                border: "border-emerald-700",  // antes: border-pink-500
+                text:   "text-emerald-700",    // antes: text-pink-500
               },
             },
             {
-              nome: "NodeJS",
-              icone: <IoLogoNodejs />,
+              nome: "HTML 5",
+              icone: <FaHtml5 />,
               cor: {
-                border: "border-green-600", // antes: border-green-400
-                text:   "text-green-600",   // antes: text-green-400
+                border: "border-orange-600", // antes: border-green-400
+                text:   "text-orange-600",   // antes: text-green-400
               },
             },
             {
-              nome: "NextJS",
-              icone: <TbBrandNextjs />,
+              nome: "CSS",
+              icone: <FaCss3Alt />,
               cor: {
-                border: "border-gray-700",  // antes: border-black
-                text:   "text-gray-700",    // antes: text-black
+                border: "border-sky-600",  // antes: border-black
+                text:   "text-sky-600",    // antes: text-black
               },
             },
           ]}

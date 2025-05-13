@@ -21,19 +21,14 @@ interface ProjetoProps {
 
 export default function CardProjeto({
     image,
-    href,
     title,
     descricao,
     tecnologias,
   }: ProjetoProps) {
     return (
-      <a
-        href={href}
-        target="_blank"
+      <div
         className="
           relative block transition-all ease-in-out duration-300
-          group-hover:opacity-80 group-hover:scale-99   
-          hover:opacity-100 hover:scale-100 hover:drop-shadow-md
         "
       >
         <article className="bg-white text-black overflow-hidden rounded-sm">
@@ -60,6 +55,6 @@ export default function CardProjeto({
             </ol>
           </div>
         </article>
-      </a>
+      </div>
     );
   }
