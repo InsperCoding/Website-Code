@@ -115,7 +115,7 @@ export function Team() {
         <section className="mt-5">
           <div className="relative w-full max-w-3xl mx-auto mb-8 md:h-100">
             <Image
-              src={`/assets/equipes/${ano}/img/fotoequipe.webp`}
+              src={`/assets/equipes/${ano}/img/fotoemequipe.webp`}
               alt="Foto da equipe"
               width={1500}
               height={900}

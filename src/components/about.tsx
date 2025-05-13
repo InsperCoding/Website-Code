@@ -1,4 +1,3 @@
-import Image from "next/image"
 import { PiTargetBold } from "react-icons/pi";
 import { PiEyeBold } from "react-icons/pi";
 
@@ -14,6 +13,7 @@ export function AboutUs() {
           allowFullScreen
         />
       </div>
+
       <div className="">
         <h2 className="text-3xl font-semibold mb-2 text-white">Sobre nós</h2>
         <p className="text-base text-white/90 mb-2">
@@ -27,7 +27,7 @@ export function AboutUs() {
         </p>
       </div>
 
-      <div className="">
+      <div className="flex flex-col justify-start h-full">
         <div className="flex flex-row items-center gap-2 mb-1">
           <PiTargetBold className="text-2xl text-white"></PiTargetBold>
           <h3 className="text-2xl font-medium text-white">Missão</h3>
@@ -37,7 +37,7 @@ export function AboutUs() {
         </p>
       </div>
 
-      <div className="">
+      <div className="flex flex-col justify-start h-full">
         <div className="flex flex-row items-center gap-2 mb-1">
           <PiEyeBold className="text-2xl text-white" />
           <h3 className="text-2xl font-medium text-white">Visão</h3>
