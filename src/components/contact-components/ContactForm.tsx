@@ -15,10 +15,10 @@ export default function ContactForm() {
 
     emailjs
       .sendForm(
-        "service_lzzprmj",
-        "template_sdhg6yi",
+        "service_k5nms6v",
+        "template_ye699ln",
         formRef.current,
-        "FfuI-M8vOxguqgfmK"
+        "z_A3g_9lcY3niEzZG"
       )
       .then(() => {
         setShowModal(true);
